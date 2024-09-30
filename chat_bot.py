@@ -56,8 +56,8 @@ st.markdown(
 # Load data
 @st.cache_data
 def load_data():
-    training = pd.read_csv('C:/Users/My Device/Downloads/healthcare-chatbot-master/healthcare-chatbot-master/Data/Training.csv')
-    testing = pd.read_csv('C:/Users/My Device/Downloads/healthcare-chatbot-master/healthcare-chatbot-master/Data/Testing.csv')
+    training = pd.read_csv('./Data/Training.csv')
+    testing = pd.read_csv('./Data/Testing.csv')
     return training, testing
 
 # Load and prepare data
