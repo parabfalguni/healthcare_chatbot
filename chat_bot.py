@@ -85,7 +85,7 @@ def load_master_data():
     precaution_dict = {}
 
     # Load Symptom Severity
-    with open('healthcare-chatbot-master/MasterData/Symptom_severity.csv', 'r') as f:
+    with open('./MasterData/Symptom_severity.csv', 'r') as f:
         csv_reader = csv.reader(f)
         for row in csv_reader:
             if len(row) >= 2:
@@ -95,14 +95,14 @@ def load_master_data():
                     print(f"Warning: Couldn't parse severity for {row[0]}")
 
     # Load Symptom Descriptions
-    with open('healthcare-chatbot-master/MasterData/symptom_Description.csv', 'r') as f:
+    with open('./MasterData/symptom_Description.csv', 'r') as f:
         csv_reader = csv.reader(f)
         for row in csv_reader:
             if len(row) >= 2:
                 description_list[row[0]] = row[1]
 
     # Load Symptom Precautions
-    with open('healthcare-chatbot-master/MasterData/symptom_precaution.csv', 'r') as f:
+    with open('./MasterData/symptom_precaution.csv', 'r') as f:
         csv_reader = csv.reader(f)
         for row in csv_reader:
             if len(row) >= 5:
